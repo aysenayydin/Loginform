@@ -9,8 +9,12 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/success" component={Success} />
+          <Route exact path="/">
+            <Login />{" "}
+          </Route>
+          <Route exact path="/success">
+            <Success />
+          </Route>
         </Switch>
       </Router>
     </>
