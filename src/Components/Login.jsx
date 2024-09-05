@@ -102,7 +102,9 @@ export default function Login() {
           value={form.email}
           invalid={touched.email && !!errors.email}
         />
-        {errors.email && <FormFeedback>{errors.email}</FormFeedback>}
+        {errors.email && (
+          <FormFeedback data-cy="email-error-text">{errors.email}</FormFeedback>
+        )}
       </FormGroup>
       <FormGroup>
         <Label for="examplePassword">Password</Label>
@@ -115,7 +117,11 @@ export default function Login() {
           value={form.password}
           invalid={touched.password && !!errors.password}
         />
-        {errors.password && <FormFeedback>{errors.password}</FormFeedback>}
+        {errors.password && (
+          <FormFeedback data-cy="password-error-text">
+            {errors.password}
+          </FormFeedback>
+        )}
       </FormGroup>
       <FormGroup check>
         <Input
